@@ -1,0 +1,13 @@
+<button 
+    [disabled]="isAllowed"
+    (click)="onClickServer()"
+    class="mb-5"
+>Add Service</button>
+<input type="text" class="form-control" (input)="onEdit($event)">
+<app-server></app-server>
+<app-server></app-server>
+<button [disabled]="view">{{ messageTodisplay }}</button>
+<p>{{ message }}</p>
+<input type="text" class="form-control" [(ngModel)]="username" (input)="onType($event)">
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="enterStatus" (click)="reset()">Reset</button>
